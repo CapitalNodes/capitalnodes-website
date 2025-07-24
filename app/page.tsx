@@ -25,7 +25,7 @@ import {
 // Animated Counter Component
 function AnimatedCounter({ end, duration = 2, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
   const [count, setCount] = useState(0)
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref)
 
   useEffect(() => {
@@ -52,7 +52,7 @@ function AnimatedCounter({ end, duration = 2, suffix = "" }: { end: number; dura
 
 // Timeline Chart Component
 function InvestmentTimeline() {
-  const timelineRef = useRef(null)
+  const timelineRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(timelineRef, { once: true })
 
   const phases = [
